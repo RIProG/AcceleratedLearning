@@ -165,7 +165,7 @@ namespace MethodsAndLists.Core
 
         public List<int> Add70ToEverySecondElement_Linq(List<int> input)
         {
-            var newList = input.Select((x, i) => i % 2 == 0 ? x+70 : x+0).ToList();
+            var newList = input.Select((x, i) => i % 2 == 0 ? x + 70 : x + 0).ToList();
             return newList;
         }
     }
