@@ -68,6 +68,21 @@ namespace MethodsAndLists.Test
         }
 
         [TestMethod]
+        public void NegativeNumbersIsZip_PositiveNumbersIsZap_ZeroIsBoing_Linq()
+        {
+            /*
+            Negativa tal => "ZIP"
+            Positiva tal => "ZAP"
+            Noll         => "BOING"
+            */
+
+            List<string> result = x.NegativeNumbersIsZip_PositiveNumbersIsZap_ZeroIsBoing_Linq(new List<int> { 1003, 20, -130, 0, 2040 });
+            List<string> expected = new List<string> { "ZAP", "ZAP", "ZIP", "BOING", "ZAP" };
+
+            CollectionAssert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
         public void LongOrShort()
         {
             // Skapa en lista av strängar som meddelar om personen är kort eller lång (över 160cm). Hoppa över orimliga värden
@@ -77,6 +92,18 @@ namespace MethodsAndLists.Test
 
             CollectionAssert.AreEqual(expected, result);
         }
+
+        [TestMethod]
+        public void LongOrShort_Linq()
+        {
+            // Skapa en lista av strängar som meddelar om personen är kort eller lång (över 160cm). Hoppa över orimliga värden
+
+            List<string> result = x.LongOrShort_Linq(new List<int> { 170, 130, 205, -10, 600, 180 });
+            List<string> expected = new List<string> { "170cm är långt", "130cm är kort", "205cm är långt", "180cm är långt" };
+
+            CollectionAssert.AreEqual(expected, result);
+        }
+
 
     }
 }
