@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using MethodsAndLists.Core.Models;
+using System.Linq;
 
 namespace MethodsAndLists.Core
 {
@@ -38,6 +39,26 @@ namespace MethodsAndLists.Core
             }
             else
                 return true;
+        }
+
+        public bool IfAllWordsAreFiveLettersOrLonger(string[] words)
+        {
+            if (words == null)
+                return false;
+
+            foreach (string word in words)
+            {
+                if (word.Length < 5)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public bool IfAllWordsAreFiveLettersOrLonger_Linq(string[] words)
+        {
+            return (words??new string[] { }).Any(x => x.Count() < 5 ? false : true);
         }
     }
 

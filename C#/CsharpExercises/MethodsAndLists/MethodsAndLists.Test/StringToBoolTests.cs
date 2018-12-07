@@ -12,7 +12,7 @@ namespace MethodsAndLists.Test
     {
         StringToBool x = new StringToBool();
 
-        [TestMethod]  
+        [TestMethod]
         public void palindrome_should_return_palindrome()
         {
             Assert.IsFalse(x.IsPalindrome(null));
@@ -25,7 +25,7 @@ namespace MethodsAndLists.Test
         }
 
         [TestMethod]
-        
+
         public void isZipCode_should_return_if_valid_zipcode_or_not()
         {
 
@@ -37,13 +37,13 @@ namespace MethodsAndLists.Test
         }
 
         [TestMethod]
-        [DataRow ("Banan")]
-        [DataRow ("Roddbåt")]
-        [DataRow ("Trollkarlar")]
-        [DataRow ("Filhanteraren")]
-        [DataRow ("Ögrupp")]
+        [DataRow("Banan")]
+        [DataRow("Roddbåt")]
+        [DataRow("Trollkarlar")]
+        [DataRow("Filhanteraren")]
+        [DataRow("Ögrupp")]
 
-        public void if_all_words_are_five_letters_or_longer_should_return_true(string word)
+        public void if_word_is_five_letters_or_longer_should_return_true(string word)
         {
 
             Assert.IsTrue(x.IsFiveLettersOrLonger(word));
@@ -56,10 +56,32 @@ namespace MethodsAndLists.Test
         [DataRow("Ö")]
         [DataRow("Man")]
 
-        public void if_all_words_are_five_letters_or_longer_should_return_false(string word)
+        public void if_word_is_five_letters_or_longer_should_return_false(string word)
         {
 
             Assert.IsFalse(x.IsFiveLettersOrLonger(word));
+        }
+
+        [TestMethod]
+        [DataRow (new[] { "Banan", "Roddbåt", "Trollkarlar", "Filhanteraren", "Ögrupp" })]
+        public void if_all_words_are_five_letters_or_longer_should_return_true(string[] words)
+        {
+
+            Assert.IsTrue(x.IfAllWordsAreFiveLettersOrLonger(words));
+            Assert.IsTrue(x.IfAllWordsAreFiveLettersOrLonger_Linq(words));
+
+        }
+
+        [TestMethod]
+        [DataRow (new[] { "Bana", "Rep", "Lo", "Man", "Ö" })]
+        [DataRow (null)]
+
+        public void if_all_words_are_five_letters_or_longer_should_return_false(string[] words)
+        {
+
+            Assert.IsFalse(x.IfAllWordsAreFiveLettersOrLonger(words));
+            Assert.IsFalse(x.IfAllWordsAreFiveLettersOrLonger_Linq(words));
+
         }
 
     }
