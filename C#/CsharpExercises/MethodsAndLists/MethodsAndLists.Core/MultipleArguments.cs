@@ -201,7 +201,58 @@ namespace MethodsAndLists.Core
 
         public int[] RotateList(int[] list, int rotation)
         {
-            throw new NotImplementedException();
+            if (list == null)
+            {
+                throw new ArgumentException();
+            }
+
+            var result = new List<int>();
+            result = list.ToList();
+
+            if (rotation < 0)
+            {
+                rotation = rotation * (-1);
+                for (int i = 0; i < rotation; i++)
+                {
+                    int internalCounter = 0;
+                    foreach (var item in list)
+                    {
+                        if (item == list[0])
+                        {
+                            result[list.Length - 1] = item;
+                        }
+                        else
+                            result[internalCounter - 1] = item;
+
+                        internalCounter++;
+                    }
+                    list = result.ToArray();
+                }
+
+            }
+
+            else if (rotation > 0)
+            {
+                for (int i = 0; i < rotation; i++)
+                {
+                    int internalCounter = 0;
+                    foreach (var item in list)
+                    {
+                        if (item == list[list.Length - 1])
+                        {
+                            result[0] = item;
+                        }
+                        else
+                            result[internalCounter + 1] = item;
+
+                        internalCounter++;
+                    }
+                    list = result.ToArray();
+                }
+
+            }
+
+            return result.ToArray();
         }
     }
 }
