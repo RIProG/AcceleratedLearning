@@ -8,9 +8,15 @@ namespace Module2
 
         static void Main(string[] args)
         {
+            char A = 'P';
+            char B = Convert.ToChar(76);
+            A++;
+            B++;
+            Console.WriteLine(A + "  " + B);
+
             //WorkingWithStrings();
             //WorkingWithTypes();
-            StringCreation();
+            //StringCreation();
 
             void StringCreation()
             {
