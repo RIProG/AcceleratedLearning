@@ -71,8 +71,101 @@ use Chinook
 --HAVING COUNT(*) > 100
 --ORDER BY NumberOfTracks DESC
 
-DECLARE @MyCustomer int=
-(
-SELECT CutomerId
-FROM Customer WHERE FirstName = 'Leonie' AND LastName = 'Köhler'
-)
+--DECLARE @MyCustomer int = 
+--(
+--    SELECT CustomerId 
+--    FROM Customer 
+--    WHERE FirstName='Leonie' AND LastName='Köhler'
+--)
+
+--SELECT cast(InvoiceDate AS date) 
+--FROM Invoice 
+--WHERE CustomerId=@MyCustomer
+
+--SELECT Customer.FirstName AS CustomerFirstName, Customer.LastName AS CustomerLastName, Employee.FirstName AS EmployeeFirstName, Employee.LastName AS EmployeeLastName
+--INTO #CustomerWithSupport
+--FROM Customer, Employee
+--WHERE Customer.SupportRepId = Employee.EmployeeId
+
+--SELECT Employee.FirstName + Employee.LastName AS EmployeeName, Employee2.FirstName + Employee2.LastName AS BossName
+--FROM Employee
+--JOIN Employee AS Employee2
+--ON Employee2.EmployeeId = Employee.ReportsTo
+
+
+--select max(datalength(YourColumn)) from YourTable 
+
+--SELECT MAX(DATALENGTH(Email)) FROM Customer
+
+--select top 1 with ties
+--   len(Email) AS LongestMail
+--from Customer
+--order by len(Email) desc
+
+--select top 1 with ties Name,(Milliseconds/(1000*60)) AS Minutes
+--from Track
+--order by (Milliseconds) desc
+
+--Select year(InvoiceDate) as year, sum(total) as Sum
+--From Invoice
+--Group by year(InvoiceDate)
+--Order by year desc
+
+--Select Distinct top 1 Playlist.Name As Name, sum(Track.Milliseconds/(1000.0*3600.0)) As LengthInHours
+--From Playlist
+--JOIN PlaylistTrack On PlaylistTrack.PlaylistId = Playlist.PlaylistId
+--JOIN Track On Track.TrackId = PlaylistTrack.TrackId
+--Group by PlaylistTrack.PlaylistId, PlayList.Name
+--Order by LengthInHours DESC
+
+--SELECT Employee.FirstName + ' ' + Employee.LastName AS EmployeeName, Employee3.FirstName + ' ' +  Employee3.LastName AS BossesBossName
+--FROM Employee
+--JOIN Employee AS Employee2
+--ON Employee2.EmployeeId = Employee.ReportsTo
+--JOIN Employee AS Employee3
+--ON Employee3.EmployeeId = Employee2.ReportsTo
+
+--CREATE TABLE AlbumReview (
+--    AlbumId int,
+--    AlbumReview varchar(300),
+--);
+
+--INSERT INTO AlbumReview (AlbumId, AlbumReview)
+--VALUES (16, 'Tunga grejer med Ozzy')
+
+--UPDATE AlbumReview
+--SET AlbumReview = 'Tunga grejer med Ozzy'
+--WHERE AlbumID = 16
+
+--ALTER TABLE Customer
+--ADD UNIQUE (Email);
+
+--Nedanstående funkar ej då email-kolumnen gjorts unik.
+--INSERT INTO Customer (FirstName, LastName, Email)
+--VALUES ('Rikard', 'Isaksson','luisg@embraer.com.br')
+
+--BACKUP DATABASE Chinook
+--TO DISK = 'C:\Temp\testDB.bak';
+
+--ALTER TABLE PlayListTrack
+--DROP CONSTRAINT FK_PlaylistTrackPlaylistId
+
+--DELETE FROM Playlist;
+
+--RESTORE DATABASE Chinook 
+--FROM DISK = 'C:\Temp\testDB.bak';
+
+
+--BEGIN TRANSACTION
+--INSERT INTO Artist (Name)
+--VALUES ('Tyskarna från Lund'),('S.P.O.C.K.'), ('Apoptygma Berzerk'), ('Depeche Mode'), ('De/Vision')
+
+--ROLLBACK
+
+--SELECT Artist.Name AS Artist, COUNT(DISTINCT PlayList.Name) AS NumberOfAppearances FROM Artist
+--FULL JOIN Album ON Artist.ArtistId = Album.ArtistId
+--FULL JOIN Track ON Track.AlbumId = Album.AlbumId
+--FULL JOIN PlaylistTrack ON PlaylistTrack.TrackId = Track.TrackId
+--FULL JOIN Playlist ON Playlist.PlaylistId = PlaylistTrack.PlaylistId
+--GROUP BY Artist.Name
+--ORDER BY NumberOfAppearances DESC
