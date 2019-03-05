@@ -1,0 +1,8 @@
+﻿h1, a, button, input, hr, textarea {
+    font-family: Impact;
+    display: block;
+}
+
+.p {
+    color: red;
+}

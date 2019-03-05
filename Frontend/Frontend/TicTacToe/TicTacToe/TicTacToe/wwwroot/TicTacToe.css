@@ -1,0 +1,48 @@
+﻿#playerTurn{
+    text-align: center;
+}
+.marker {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.held {
+    background-color: black;
+}
+
+.holder {
+    height: 110px;
+    width: 110px;
+    margin: 10px;
+    border: solid 5px black;
+    background-color: white;
+    display: inline-block;
+}
+
+.startingHolder {
+    height: 110px;
+    width: 110px;
+    margin: 10px;
+    border: solid 5px white;
+    background-color: white;
+    display: inline-block;
+}
+
+.hovered {
+    border: dotted 5px black;
+}
+
+.invisible {
+    display: none;
+}
+
+#container {
+    margin: auto;
+    top: 100px;
+    width: 750px;
+}

@@ -1,0 +1,10 @@
+﻿@model CardListVm
+
+<h3>Add cards</h3>
+<form method="post" action="AddCard">
+    <label asp-for="Card.Url">Card url</label>
+    <input asp-for="Card.Url" />
+    <button type="submit">Ok</button>
+</form>
+
+<a asp-action="Index">Back</a>

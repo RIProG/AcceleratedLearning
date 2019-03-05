@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Card>
+    <h1>All cards</h1>
+        @foreach (Card x in Model)
+        {
+            <a asp-action="GetById" asp-route-id="@x.Id"><img src="@x.Url" height=250 width=150/></a>
+        }
+
+
+    <a asp-action="GetById" asp-route-id="4">Visa produkt 4 med taghelper</a>
+    <a asp-action="GetById" asp-route-id="9">Visa produkt 9 med taghelper</a>

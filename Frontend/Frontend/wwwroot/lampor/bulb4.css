@@ -1,0 +1,16 @@
+﻿body {
+    background-color: black;
+}
+
+img {
+    width: 100px;
+}
+
+#textSpace{
+    color: white;
+}
+
+button {
+    font-size: 24px;
+    padding: 20px 200px;
+}

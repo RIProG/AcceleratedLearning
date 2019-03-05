@@ -1,0 +1,34 @@
+﻿@model HemNet_Azure.Models.TimeTempVm
+
+<h1>Weather today</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeTemp.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeTemp.Temp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.TimeTemps != null)
+        {
+            @foreach (var item in Model.TimeTemps)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Temp)
+                    </td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>

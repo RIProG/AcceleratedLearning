@@ -1,0 +1,15 @@
+﻿#resultat {
+    color: green;
+}
+
+input, button, div {
+    display: block;
+    font-size: 30px;
+    font-family: Arial;
+    margin-bottom: 20px
+}
+
+button, input {
+    width: 100%;
+    padding: 20px;
+}

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>webapi3</title>
+</head>
+<body>
+    <h3>Frukost</h3>
+
+    <form method="post" action="/webapi3/Breakfast">
+        Frukost: <input name="breakfast" />
+        <button>Ok</button>
+    </form>
+    <br />
+    <h3>Kvadrering av tal</h3>
+
+    <form method="post" action="/webapi3/raisedtotwo">
+        Välj tal: <input name="number" />
+        <button>Ok</button>
+    </form>
+    <br />
+
+    <h3>Lista av tal</h3>
+    <form method="post" action="/webapi3/NumberList">
+        Från tal: <input name="number1" />
+        Till tal: <input name="number2" />
+        <button>Ok</button>
+    </form>
+
+    <h3>Ändra bakgrundsfärg</h3>
+    <form method="post" action="/webapi3/backgroundcolor">
+        Välj färg: <input name="backgroundColor" />
+        <button>Ok</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+Hämta alla tavlor
+https://api.trello.com/1/members/me/boards?key=66b94baf3e4dfdfa2688852ffdd7b7ef&token=f03995d5b7689ae9811d2f5b23b56ed96042dd7dd1839a6b8247b1a7e12528e9
+
+Lista för en tavla
+https://api.trello.com/1/boards/5c5be73af778cd0f75e37b5c/lists?key=66b94baf3e4dfdfa2688852ffdd7b7ef&token=f03995d5b7689ae9811d2f5b23b56ed96042dd7dd1839a6b8247b1a7e12528e9
+
+Nyckel, token och id för tavlor
+key 66b94baf3e4dfdfa2688852ffdd7b7ef
+token f03995d5b7689ae9811d2f5b23b56ed96042dd7dd1839a6b8247b1a7e12528e9
+boards id "5c5be73af778cd0f75e37b5c", "5c6407b91cabba18e3d6c2de"
+
+Använd Postman för dessa grejer!

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Newsapp</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="img/icons8-reddit-64.png" />
+</head>
+<body>
+
+    <div class="topbuttons">
+        <button onclick="clickShowAllNews()" class="btn-inline">Show All News</button>
+        <button onclick="clickRevealAddNews()" class="btn-inline">Add News</button>
+        <button onclick="clickRevealUpdateNews()" class="btn-inline">Update News</button>
+        <button onclick="clickSeed()" class="btn-inline">Seed News</button>
+        <button onclick="clickStatArea()" class="btn-inline">Count News</button>
+        <button onclick="clickRecreate()" class="btn-inline">Recreate Database</button>
+    </div>
+    <div class="content" id="newsContent">
+        <div id="newsList">
+            <table id="newsTable">
+            </table>
+        </div>
+        <div id="addArea">
+
+            <div id="addAreaError"></div>
+        </div>
+
+        <div id="updateArea">
+            
+        </div>
+    
+    <div id="statArea">
+        
+
+        <span id="nrOfNews"></span>
+    </div>
+        </div>
+<script src="/js/main.js"></script>
+</body>
+</html>
